@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brennan's Lawn & Turf</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f0fdf4;
+      color: #14532d;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+      list-style: none;
+      position: relative;
+    }
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: -1.5rem;
+      color: #16a34a;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: #16a34a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #15803d;
+    }
+    .contact a {
+      color: #14532d;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #166534;
+      border-top: 1px solid #d1fae5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Brennan's Lawn & Turf</h1>
+    <p>Professional Lawn Care Services</p>
+  </header>
+
+  <section class="section cards">
+    <div class="card">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Affordable & Reliable Service</li>
+        <li>Experienced Professionals</li>
+        <li>Eco-Friendly Equipment</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Request a Free Quote</h2>
+      <form action="https://formsubmit.co/brennanslawnandturf@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" rows="4" placeholder="Questions or Comments..." required></textarea>
+
+        <!-- Optional: redirect after submission -->
+        <input type="hidden" name="_next" value="https://example.com/thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Get Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section contact" style="text-align: center;">
+    <h2>Contact Us</h2>
+    <p>📞 <a href="tel:+14054021131">(405) 402-1131</a></p>
+    <p>📧 <a href="mailto:brennanslawnandturf@gmail.com">brennanslawnandturf@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Brennan's Lawn & Turf. All rights reserved.
+  </footer>
+
+  <script>
+    // Automatically show the current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
